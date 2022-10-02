@@ -1,4 +1,19 @@
-import os, sys, time, datetime, math #Import Modules
+#########################################################
+#                Author: Jacob Garrison                 #
+#                 Date: 2 October 2022                  #
+#                    Class: ENTD261                     #
+#                  Assignment: Week 5                   #
+#########################################################
+#  Description: This program will take a user input     #
+#  and return the files that contain that input in the  #
+#  current directory and output the results to a file   #
+#  called Results.txt                                   #
+#########################################################
+#    To run this program, type the following in the     #
+#    command line: python3 w5_jacob_garrison.py         #
+#########################################################
+
+import os, sys, time, datetime, math #Import modules
 
 try: #Try to Open File
     filePath = input("Enter File Path: ") #Input File Path
