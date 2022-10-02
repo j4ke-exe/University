@@ -1,4 +1,3 @@
-//Type node w4_jacob_garrison.js in the command line to run
 //Must have node and npm express installed
 //To download type: npm install express --save
 
