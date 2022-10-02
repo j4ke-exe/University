@@ -13,7 +13,7 @@
 #    command line: python3 w5_jacob_garrison.py         #
 #########################################################
 
-import os, sys, time, datetime, math #Import modules
+import os, sys, time #Import modules
 
 try: #Try to Open File
     filePath = input("Enter File Path: ") #Input File Path
