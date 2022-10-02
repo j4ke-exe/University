@@ -10,7 +10,7 @@
 #  called Results.txt                                   #
 #########################################################
 #    To run this program, type the following in the     #
-#    command line: python3 w5_jacob_garrison.py         #
+#    command line: python3 FileFinder.py                #
 #########################################################
 
 import os, sys, time #Import modules
