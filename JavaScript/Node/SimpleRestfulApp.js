@@ -32,12 +32,12 @@ var products = [
 app.get("/", function(req, res) {
 	var msg=""
 	msg += '<center><h1>Computer Center</h1></center>'
-    msg += '<center><a href="/home">Home</a> <br /></center>'
-    msg += '<center><a href="/contact">Contact</a> <br /></center>'
+        msg += '<center><a href="/home">Home</a> <br /></center>'
+        msg += '<center><a href="/contact">Contact</a> <br /></center>'
   	msg += '<center><a href="/products">Products</a> <br /></center>'
-	  msg += '<center><a href="/products/0">Gaming Monitor</></center>'
-    msg += '<center><a href="/products/1">Mechanical Keyboard</></center>'
-    msg += '<center><a href="/products/2">Gaming Mouse</></center>'
+	msg += '<center><a href="/products/0">Gaming Monitor</></center>'
+        msg += '<center><a href="/products/1">Mechanical Keyboard</></center>'
+        msg += '<center><a href="/products/2">Gaming Mouse</></center>'
 	
 	res.send(msg);
 });
