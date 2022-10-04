@@ -1,6 +1,6 @@
 ' This is a simple script to take the sum and average of three numbers. '
 ' To begin, simply imput the following into your console:               '
-' cscript .\SumOfThree.vbs 2 3 5 > results.txt                   '
+' cscript .\SumOfThree.vbs 2 3 5 > results.txt                          '
 ' --------------------------------------------------------------------- '
 ' Example results:                                                      '
 ' The Total = 10                                                        '
