@@ -35,3 +35,7 @@ public class LightningDist {
 // lightning strike and thunder: 1
 // Lightning strike was approximately
 // 0.2114463888888889 miles away.
+
+// final = keyword to set a constant variable
+// Good practice is to make constants as all upper case separated by underscores
+// Ex: SPEED_OF_SOUND = 761.207
