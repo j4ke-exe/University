@@ -25,4 +25,4 @@ public class ShippingCalculator {
            Flat fee(cents): 75
            Cents per pound: 25
            Shipping cost(cents): 325
-/*
+*/
