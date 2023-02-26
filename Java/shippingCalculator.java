@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class ShippingCalculator {
    public static void main(String[] args) {
       Scanner scnr = new Scanner(System.in);
+      final int FLAT_FEE_CENTS = 75;
       int shipWeightPounds;
       int shipCostCents = 0;
-      final int FLAT_FEE_CENTS = 75;
 
       final int CENTS_PER_POUND = 25;
       shipWeightPounds = scnr.nextInt();
