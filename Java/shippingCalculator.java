@@ -19,8 +19,10 @@ public class ShippingCalculator {
    }
 }
 
-// Testing shipWeightPounds = 10
-// Output: Weight(lb): 10
-//         Flat fee(cents): 75
-//         Cents per pound: 25
-//         Shipping cost(cents): 325
+/* 
+   Testing shipWeightPounds = 10
+   Output: Weight(lb): 10
+           Flat fee(cents): 75
+           Cents per pound: 25
+           Shipping cost(cents): 325
+/*
