@@ -18,7 +18,6 @@ public class NestedLoop {
 }
 
 /* 
-
 Testing with userNum = 20
 
 Output:
@@ -42,6 +41,5 @@ Output:
                  17
                   18
                    19
-                    20
-                    
+                    20                    
 */
