@@ -1,5 +1,6 @@
 /*
-Question: Write a for loop to print all elements in courseGrades, following each element with a space (including the last). Print forwards, then backwards. End each loop with a newline. Ex: If courseGrades = {7, 9, 11, 10}, print:
+Question: Write a for loop to print all elements in courseGrades, following each element with a space (including the last). 
+Print forwards, then backwards. End each loop with a newline. Ex: If courseGrades = {7, 9, 11, 10}, print:
           7 9 11 10 
           10 11 9 7 
 
