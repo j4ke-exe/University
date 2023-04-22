@@ -1,7 +1,6 @@
 from Node import Node
 from LinkedList import LinkedList
 
-
 num_list = LinkedList()
 
 node_a = Node(66)
@@ -30,7 +29,6 @@ print()
 
 num_list.remove_after(node_e)   # Remove the tail (17)
 num_list.remove_after(None)     # Remove the head (66)
-
 
 # Output final list
 print('List after removing nodes:', end=' ')
