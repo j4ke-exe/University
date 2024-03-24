@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}" />
+    <meta charset="UTF-8" />
+    <title>Menu | Pizzazz Pizza</title>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">HOME</a>
+        </li>
+        <li>
+          <a href="/menu">MENU</a>
+        </li>
+        <li>
+          <a href="/cart">CART</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="menu-container">
+      <h1 class="title">MENU</h1>
+    </div>
+    <div class="menu-items">
+      {% for pizza in menu %}
+        <div class="menu-item">
+          <img src="{{ url_for('static', filename = 'images/' + pizza.image) }}" alt="{{ pizza.name }}" draggable="false" />
+          <h2>{{ pizza.name }} - ${{ '%.2f'|format(pizza.price) }}</h2>
+          <form action="/add_to_cart" method="post">
+            <input type="hidden" name="id" value="{{ pizza.id }}" />
+            <label for="quantity">Quantity:</label>
+            <input type="number" name="quantity" id="quantity" value="1" min="1" />
+            <button type="submit">Add to Cart</button>
+          </form>
+        </div>
+      {% endfor %}
+    </div>
+
+    <footer>&copy; 2024 PIZZAZZ PIZZA</footer>
+  </body>
+</html>

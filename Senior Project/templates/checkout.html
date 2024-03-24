@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}" />
+    <meta charset="UTF-8" />
+    <title>Checkout | Pizzazz Pizza</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">HOME</a>
+        </li>
+        <li>
+          <a href="/menu">MENU</a>
+        </li>
+        <li>
+          <a href="/cart">CART</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="checkout-container">
+      <h1 class="title">CHECKOUT</h1>
+    </div>
+    <form method="post" class="checkout-form">
+      {{ form.hidden_tag() }}
+      <div class="form-row">
+        <input type="text" id="name" name="name" class="form-control" placeholder="Name" required />
+      </div>
+      <div class="form-row">
+        <input type="text" id="address" name="address" class="form-control" placeholder="Address" required />
+      </div>
+      <div class="form-row">
+        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required />
+      </div>
+      <div class="form-row">
+        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone" required />
+      </div>
+
+      <div class="form-row">
+        <input type="text" id="cardNumber" name="cardNumber" class="form-control" placeholder="Valid Card Number" required />
+      </div>
+      <div class="form-row">
+        <input type="text" id="cardExpiry" name="cardExpiry" class="form-control" placeholder="MM/YY" required />
+      </div>
+      <div class="form-row">
+        <input type="text" id="cardCVV" name="cardCVV" class="form-control" placeholder="CVV" required />
+      </div>
+      <div class="form-row">
+        <button type="submit" class="submit-btn">Place Order</button>
+      </div>
+    </form>
+
+    <footer>&copy; 2024 PIZZAZZ PIZZA</footer>
+
+    <script src="{{ url_for('static', filename = 'scripts/paymentForm.js') }}"></script>
+  </body>
+</html>

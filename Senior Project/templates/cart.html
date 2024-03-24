@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}" />
+    <meta charset="UTF-8" />
+    <title>Cart | Pizzazz Pizza</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">HOME</a>
+        </li>
+        <li>
+          <a href="/menu">MENU</a>
+        </li>
+        <li>
+          <a href="/cart">CART</a>
+        </li>
+      </ul>
+    </nav>
+
+    {% if cart %}
+      <div class="cart-container">
+        <h1 class="title">CART</h1>
+      </div>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Pizza</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in cart %}
+            <tr class="cart-item">
+              <td>{{ item.name }}</td>
+              <td>
+                <form action="/update_item" method="post" class="quantity-form">
+                  <input type="hidden" name="item_id" value="{{ item.id }}" />
+                  <button type="submit" name="action" value="decrease">-</button>
+                  <span>{{ item.quantity }}</span>
+                  <button type="submit" name="action" value="increase">+</button>
+                </form>
+              </td>
+              <td>${{ '%.2f'|format(item.price) }}</td>
+              <td>${{ '%.2f'|format(item.price * item.quantity) }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+        <tfoot>
+          <tr class="total-cost">
+            <td colspan="3" style="text-align: right;">Total Cost:</td>
+            <td>${{ '%.2f'|format(total_cost) }}</td>
+          </tr>
+          <tr class="checkout-row">
+            <td colspan="4" style="text-align: right;">
+              <a href="/checkout"><button class="btn-checkout">Checkout</button></a>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    {% else %}
+      <div class="empty-container">
+        <h1 class="title-empty">Your cart is empty. Why not fill it with some delicious pizza?</h1>
+      </div>
+    {% endif %}
+
+    <footer>&copy; 2024 PIZZAZZ PIZZA</footer>
+  </body>
+</html>

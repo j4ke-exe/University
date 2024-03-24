@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}" />
+    <meta charset="UTF-8" />
+    <title>Track Your Order | Pizzazz Pizza</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">HOME</a>
+        </li>
+        <li>
+          <a href="/menu">MENU</a>
+        </li>
+        <li>
+          <a href="/cart">CART</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="order-container">
+      <h1 class="title">ORDER SUMMARY</h1>
+    </div>
+    {% if order %}
+      <div class="order-info">
+        <p class="summary-item">
+          <b>Order Number:</b> {{ order_id }}
+        </p>
+        <p class="summary-item">
+          <b>Order Status:</b> {{ order.status }}
+        </p>
+      </div>
+      <div class="customer-info">
+        <p class="summary-item">
+          <b>Name:</b> {{ order.customer_info.name }}
+        </p>
+        <p class="summary-item">
+          <b>Address:</b> {{ order.customer_info.address }}
+        </p>
+        <p class="summary-item">
+          <b>Email:</b> {{ order.customer_info.email }}
+        </p>
+        <p class="summary-item">
+          <b>Phone:</b> {{ order.customer_info.phone }}
+        </p>
+      </div>
+    {% endif %}
+
+    <footer>&copy; 2024 PIZZAZZ PIZZA</footer>
+  </body>
+</html>
